@@ -4,6 +4,7 @@ import Scanner from "react-webcam-qr-scanner";
 import styled from "styled-components";
 import back from "../../assets/back.svg";
 import { qrDecode } from "../../utils/qrDecode";
+import qrOverlay from "../../assets/qrOverlay.png";
 
 type Props = {
   setPlace: (input: string) => void;
@@ -26,6 +27,8 @@ export const QR = ({ setPlace }: Props) => {
         </Link>
         掃瞄二維碼
       </Header>
+      <Overlay />
+      <Message>掃瞄二維碼</Message>
       <VideoContainer>
         <StyledScanner
           onDecode={handleScan}
@@ -52,7 +55,7 @@ const BackButton = styled.img`
 const Header = styled.div`
   width: 100%;
   position: absolute;
-  z-index: 1;
+  z-index: 100;
   color: #ffffff;
   background-color: #12b188;
   text-align: center;
@@ -83,4 +86,30 @@ const StyledScanner = styled(Scanner)`
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+`;
+
+const Overlay = styled.div`
+  /* The image used */
+  background-image: url("${qrOverlay}");
+
+  /* Full height */
+  height: 100%;
+
+  /* Center and scale the image nicely */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  z-index: 50;
+  position: relative;
+`;
+
+const Message = styled.div`
+  position: absolute;
+  z-index: 51;
+  bottom: 25%;
+  width: 100%;
+  text-align: center;
+  color: #ffffff;
+  font-size: 16px;
 `;
