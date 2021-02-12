@@ -15,8 +15,11 @@ export const QR = ({ setPlace }: Props) => {
 
   const handleScan = ({ data }: { data: string }) => {
     if (!data) return;
-    setPlace(qrDecode(data));
-    browserHistory.push("/confirm");
+    const place = qrDecode(data);
+    if (place !== "") {
+      setPlace(place);
+      browserHistory.push("/confirm");
+    }
   };
 
   return (
