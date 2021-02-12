@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.js": "/back-home-safe/static/js/main.05ebbe4e.chunk.js",
-    "main.js.map": "/back-home-safe/static/js/main.05ebbe4e.chunk.js.map",
+    "main.js": "/back-home-safe/static/js/main.fbb16b1c.chunk.js",
+    "main.js.map": "/back-home-safe/static/js/main.fbb16b1c.chunk.js.map",
     "runtime-main.js": "/back-home-safe/static/js/runtime-main.d125a3b3.js",
     "runtime-main.js.map": "/back-home-safe/static/js/runtime-main.d125a3b3.js.map",
     "static/js/2.0c69a326.chunk.js": "/back-home-safe/static/js/2.0c69a326.chunk.js",
@@ -15,11 +15,12 @@
     "service-worker.js.map": "/back-home-safe/service-worker.js.map",
     "static/js/2.0c69a326.chunk.js.LICENSE.txt": "/back-home-safe/static/js/2.0c69a326.chunk.js.LICENSE.txt",
     "static/media/back.7bf7a56f.svg": "/back-home-safe/static/media/back.7bf7a56f.svg",
+    "static/media/qrOverlay.399bdc2a.png": "/back-home-safe/static/media/qrOverlay.399bdc2a.png",
     "static/media/tick.e3b91334.png": "/back-home-safe/static/media/tick.e3b91334.png"
   },
   "entrypoints": [
     "static/js/runtime-main.d125a3b3.js",
     "static/js/2.0c69a326.chunk.js",
-    "static/js/main.05ebbe4e.chunk.js"
+    "static/js/main.fbb16b1c.chunk.js"
   ]
 }
