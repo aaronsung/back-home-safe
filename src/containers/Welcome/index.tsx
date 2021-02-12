@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { Link } from "react-router-dom";
 import styled from "styled-components";
 import { Button } from "../../components/Button";
@@ -8,27 +8,33 @@ type Props = {
   setPlace: (input: string) => void;
 };
 
-export const Welcome = ({ place, setPlace }: Props) => (
-  <>
-    <ContentWrapper>
-      <Msg>我想去</Msg>
-      <Place
-        value={place}
-        onChange={(e) => setPlace(e.target.value)}
-        placeholder="輸入地址"
-      />
-    </ContentWrapper>
-    <ActionWrapper>
-      {place === "" ? (
-        <Button disabled>話去就去!</Button>
-      ) : (
-        <Link to="/confirm">
-          <Button>話去就去!</Button>
-        </Link>
-      )}
-    </ActionWrapper>
-  </>
-);
+export const Welcome = ({ place, setPlace }: Props) => {
+  useEffect(() => {
+    setPlace("");
+  }, [setPlace]);
+
+  return (
+    <>
+      <ContentWrapper>
+        <Msg>我想去</Msg>
+        <Place
+          value={place}
+          onChange={(e) => setPlace(e.target.value)}
+          placeholder="輸入地址"
+        />
+      </ContentWrapper>
+      <ActionWrapper>
+        {place === "" ? (
+          <Button disabled>話去就去!</Button>
+        ) : (
+          <Link to="/confirm">
+            <Button>話去就去!</Button>
+          </Link>
+        )}
+      </ActionWrapper>
+    </>
+  );
+};
 
 const ContentWrapper = styled.div`
   width: 100%;
