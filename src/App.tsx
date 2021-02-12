@@ -6,7 +6,7 @@ import { Welcome } from "./containers/Welcome";
 import { Confirm } from "./containers/Confirm";
 
 function App() {
-  const [place, setPlace] = useState("輸入地址");
+  const [place, setPlace] = useState("");
 
   return (
     <>

@@ -12,12 +12,20 @@ export const Welcome = ({ place, setPlace }: Props) => (
   <>
     <ContentWrapper>
       <Msg>我想去</Msg>
-      <Place value={place} onChange={(e) => setPlace(e.target.value)} />
+      <Place
+        value={place}
+        onChange={(e) => setPlace(e.target.value)}
+        placeholder="輸入地址"
+      />
     </ContentWrapper>
     <ActionWrapper>
-      <Link to="/confirm">
-        <Button>話去就去!</Button>
-      </Link>
+      {place === "" ? (
+        <Button disabled>話去就去!</Button>
+      ) : (
+        <Link to="/confirm">
+          <Button>話去就去!</Button>
+        </Link>
+      )}
     </ActionWrapper>
   </>
 );
