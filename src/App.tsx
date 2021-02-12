@@ -4,6 +4,7 @@ import { createGlobalStyle } from "styled-components";
 import { Route, HashRouter, Switch, Redirect } from "react-router-dom";
 import { Welcome } from "./containers/Welcome";
 import { Confirm } from "./containers/Confirm";
+import { QR } from "./containers/QR";
 
 function App() {
   const [place, setPlace] = useState("");
@@ -15,6 +16,9 @@ function App() {
         <Switch>
           <Route exact path="/">
             <Welcome place={place} setPlace={setPlace} />
+          </Route>
+          <Route exact path="/qr">
+            <QR setPlace={setPlace} />
           </Route>
           <Route exact path="/confirm">
             <Confirm place={place} />

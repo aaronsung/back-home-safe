@@ -31,6 +31,7 @@ export const Welcome = ({ place, setPlace }: Props) => {
             <Button>話去就去!</Button>
           </Link>
         )}
+        <StyledLink to="/qr">掃瞄二維碼</StyledLink>
       </ActionWrapper>
     </>
   );
@@ -71,4 +72,8 @@ const ActionWrapper = styled.div`
   text-align: center;
   color: #fff;
   padding-bottom: 40px;
+`;
+
+const StyledLink = styled(Link)`
+  color: #ffffff;
 `;
