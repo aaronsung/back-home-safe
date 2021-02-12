@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { createGlobalStyle } from "styled-components";
 
-import { Route, HashRouter, Switch } from "react-router-dom";
+import { Route, HashRouter, Switch, Redirect } from "react-router-dom";
 import { Welcome } from "./containers/Welcome";
 import { Confirm } from "./containers/Confirm";
 
@@ -19,6 +19,7 @@ function App() {
           <Route exact path="/confirm">
             <Confirm place={place} />
           </Route>
+          <Redirect to="/" />
         </Switch>
       </HashRouter>
     </>
